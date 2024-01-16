@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="form-container">
+    <h2 class="form-title">Modifier un Équipement d'Entraînement</h2>
+    <form [formGroup]="postEquipementForm">
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input type="text" id="type" name="type" required formControlName="type">
+      </div>
+      <div class="form-group">
+        <label for="taille">Taille</label>
+        <input type="text" id="taille" name="taille" required formControlName="taille">
+      </div>
+      <div class="form-group">
+        <label for="poids">Poids (kg)</label>
+        <input type="number" id="poids" name="poids" required formControlName="poids">
+      </div>
+      <div class="form-group">
+        <label for="disponibilite">Disponibilité</label>
+        <input type="text" id="disponibilite" name="disponibilite" required formControlName="disponibilite">
+      </div>
+
+      <button type="submit" (click)="postEquipement()">Post</button>
+    </form>
+  </div>
+</div>
+

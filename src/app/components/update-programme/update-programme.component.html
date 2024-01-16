@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="form-container">
+    <h2 class="form-title">Modifier un Programme de Fitness</h2>
+    <form [formGroup]="updateProgrammeForm">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="cout">Coût (DH)</label>
+        <input type="text" id="cout" name="cout" required formControlName="cout">
+      </div>
+      <div class="form-group">
+        <label for="niveau">Niveau de difficulté</label>
+        <input type="text" id="niveau" name="niveau" required formControlName="niveau">
+      </div>
+      <div class="form-group">
+        <label for="instructeur">Instructeur</label>
+        <input type="text" id="instructeur" name="instructeur" required formControlName="instructeur">
+      </div>
+
+      <button type="submit" (click)="updateProgramme()" >Modifier</button>
+    </form>
+  </div>
+</div>

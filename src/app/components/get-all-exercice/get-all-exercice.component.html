@@ -1,0 +1,52 @@
+<button class="btn-new" routerLink="/exercice">Post New Exercice</button>
+<br>
+<br>
+
+<input  placeholder="Search" type="text" [(ngModel)]="nom" (input)="search()"/>
+
+
+<table>
+
+  <thead>
+
+  <tr>
+
+    <th>Nom</th>
+
+    <th>Description</th>
+
+    <th>Durée (min)</th>
+
+    <th>Nombre de répétitions</th>
+    <th>Type</th>
+
+    <th>Date de réalisation de l'exercice</th>
+
+    <th>Action</th>
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+
+  <tr *ngFor="let exercice of exercices">
+
+    <td>{{exercice.name}}</td>
+
+    <td>{{exercice.description}}</td>
+
+    <td>{{exercice.duree}}</td>
+    <td>{{exercice.nbrep}}</td>
+
+    <td>{{exercice.type}}</td>
+
+    <td>{{exercice.date}}</td>
+    <td><button class="btn-update" routerLink="/exercice/{{exercice.id}}">Modifier</button>
+      <button class="btn-delete" (click)="deleteExercice(exercice.id)">Supprimer</button>
+    </td>
+  </tr>
+
+  </tbody>
+
+</table>

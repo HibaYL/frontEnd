@@ -1,0 +1,45 @@
+<button class="btn-new" routerLink="/programme">Post New Programme de Fitness</button>
+<br>
+<br>
+
+<input  placeholder="Search" type="text" [(ngModel)]="name" (input)="search()"/>
+
+
+<table>
+
+  <thead>
+
+  <tr>
+
+    <th>Nom</th>
+
+    <th>Coût (DH)</th>
+
+    <th>Niveau de difficulté</th>
+
+    <th>Instructeur</th>
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+
+  <tr *ngFor="let programme of programmes">
+
+    <td>{{programme.name}}</td>
+
+    <td>{{programme.cout}}</td>
+
+    <td>{{programme.niveau}}</td>
+
+    <td>{{programme.instructeur}}</td>
+
+    <td><button class="btn-update" routerLink="/programme/{{programme.id}}">Modifier</button>
+      <button class="btn-delete" (click)="deleteProgramme(programme.id)">Supprimer</button>
+    </td>
+  </tr>
+
+  </tbody>
+
+</table>

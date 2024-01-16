@@ -1,0 +1,76 @@
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-new {
+  background-color: #495057;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-new:hover {
+  background-color: #343a40;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.table-container {
+  text-align: center;
+}
+
+
+table {
+  width: 80%;
+  margin: 30px;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #495057;
+  color: white;
+}
+
+
+.btn-update, .btn-delete {
+  background-color: #343a40;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-update:hover, .btn-delete:hover {
+  background-color: #212529;
+}

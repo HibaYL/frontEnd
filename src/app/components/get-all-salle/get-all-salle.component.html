@@ -1,0 +1,49 @@
+<button class="btn-new" routerLink="/salle">Post New Salle de Sport</button>
+<br>
+<br>
+
+<input  placeholder="Search" type="text" [(ngModel)]="name" (input)="search()"/>
+
+
+<table>
+
+  <thead>
+
+  <tr>
+
+    <th>Nom</th>
+
+    <th>Horaire d'ouverture</th>
+
+    <th>Prix d'Abonnement (DH)</th>
+
+    <th>Adresse</th>
+
+    <th>Responsable de la Salle</th>
+
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let salle of salles">
+
+    <td>{{salle.name}}</td>
+
+    <td>{{salle.horaire}}</td>
+
+    <td>{{salle.prix}}</td>
+
+
+    <td>{{salle.adresse}}</td>
+
+    <td>{{salle.responsable}}</td>
+    <td><button class="btn-update" routerLink="/salle/{{salle.id}}">Modifier</button>
+      <button class="btn-delete" (click)="deleteProduct(salle.id)">Supprimer</button>
+    </td>
+  </tr>
+
+  </tbody>
+
+</table>

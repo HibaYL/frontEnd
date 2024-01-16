@@ -1,0 +1,43 @@
+<button class="btn-new" routerLink="/equipement">Post New Équipement d'Entraînement</button>
+<br>
+<br>
+
+<input  placeholder="Search" type="text" [(ngModel)]="type" (input)="search()"/>
+
+
+<table>
+
+  <thead>
+
+  <tr>
+
+    <th>Type</th>
+
+    <th>Taille</th>
+
+    <th>Poids (kg)</th>
+
+    <th>Disponibilité</th>
+
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+
+  <tr *ngFor="let equipement of equipements">
+
+    <td>{{equipement.type}}</td>
+    <td>{{equipement.taille}}</td>
+    <td>{{equipement.poids}}</td>
+    <td>{{equipement.disponibilite}}</td>
+
+    <td><button class="btn-update" routerLink="/equipement/{{equipement.id}}">Modifier</button>
+      <button class="btn-delete" (click)="deleteEquipement(equipement.id)">Supprimer</button>
+    </td>
+  </tr>
+
+  </tbody>
+
+</table>
